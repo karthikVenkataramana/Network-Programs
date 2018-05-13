@@ -1,0 +1,91 @@
+For Telnet (HTTP Websites, Port 80):
+telnet www.google.com 80
+HEAD/index.html HTTP/1.1
+Host: www.google.com
+
+For Openssl(HTTPS Websites, Port 443):
+openssl s_client -connect stackoverflow.com:443 
+HEAD /questions/5752353/c-strcat-garbage-characters HTTP/1.1
+Host: stackoverflow.com
+Accept-Ranges: bytes
+If-Modified-Since:Sat Mar 17 15:46:33 2018
+ 
+If-Modified-Since: Fri Mar 16 03:45:12 2018 GMT
+HEAD / HTTP/1.0
+User-Agent: chrome
+Host: www.facebook.com
+Accept: */*
+
+If- Modified-Since: 
+To generate own openssl certificate
+openssl req -x509 -nodes -days 365 -newkey rsa:1024 -keyout mycert.pem -out mycert.pem
+
+If-Modified-Since: Wed, 14 Mar 2018 16:47:37 GMT
+
+Example:
+HTTP/1.1 200 OK
+X-Content-Type-Options: nosniff
+X-Drupal-Cache: HIT
+Etag: "1521050061-0-gzip"
+Content-Language: en
+Cache-Control: public, max-age=3600
+Last-Modified: Wed, 14 Mar 2018 17:54:21 GMT
+Expires: Sun, 19 Nov 1978 05:00:00 GMT
+Vary: Cookie,Accept-Encoding
+Content-Type: text/html; charset=utf-8
+X-Backend: tertiary_pool_1s
+X-BackendName: unt_web01_prd_1s
+X-Cacheable: YES
+Date: Wed, 14 Mar 2018 18:18:38 GMT
+X-Varnish: 42486010 42479165
+Age: 583
+Via: 1.1 varnish
+Connection: keep-alive
+X-Served-By: unt-cache01
+X-Cache: HIT
+Set-Cookie: TS01f15795=010880b95014d18f03248449eed5cbd44518e5803ec479e69f9b6394ad0a90af86ea975f1540bf220d98e58f60dce642ef01eb696c; Path=/
+Transfer-Encoding: chunked
+
+
+GET /   HTTP/1.0
+Host: www.unt.edu
+User-Agent: *
+Content-Type: text/html;charset=UTF-8 
+If-Modified-Since:Mon Jan  4 10:41:23 2016
+
+
+openssl s_client -connect www.google.com:443
+HEAD /   HTTP/1.0
+Host: www.google.com
+User-Agent: *
+Content-Type: text/html;charset=UTF-8
+If-Modified-Since:Fri Mar 16 04:58:56 2018
+
+MINE:
+
+
+GET / questions/5752353/c-strcat-garbage-characters HTTP/1.0
+Host: stackoverflow.com
+User-Agent: *
+Content-Type: text/html;charset=UTF-8
+If-Modified-Since:Sat Mar 17 15:46:33 2018
+
+GET /  HTTP/1.0
+Host: www.unt.edu
+User-Agent: *
+Content-Type: text/html;charset=UTF-8
+If-Modified-Since:Sat Mar 17 16:01:56 2018
+
+GET /tutorial/cfileio.html HTTP/1.0
+Host: www.cprogramming.com
+User-Agent: *
+Content-Type: text/html;charset=UTF-8
+If-Modified-Since:Sat Mar 17 16:37:51 2018
+
+
+Mon, 26 Feb 2018 10:27:36 GMT
+GET /1st_edition/chapter14.html HTTP/1.0
+Host: eloquentjavascript.net
+User-Agent: *
+Content-Type: text/html;charset=UTF-8
+If-Modified-Since:Sat Mar 17 17:07:00 2018
